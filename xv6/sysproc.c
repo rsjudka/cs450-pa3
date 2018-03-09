@@ -89,3 +89,11 @@ sys_uptime(void)
   release(&tickslock);
   return xticks;
 }
+
+// change made
+int
+sys_myMemory(void)
+{
+  cprintf("in progress...\n");
+  return 1;
+}
