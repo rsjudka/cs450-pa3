@@ -60,6 +60,7 @@ walkpgdir(pde_t *pgdir, const void *va, int alloc)
 static int
 mappages(pde_t *pgdir, void *va, uint size, uint pa, int perm)
 {
+  cprintf("[start] mappages\n");
   char *a, *last;
   pte_t *pte;
 
@@ -76,6 +77,7 @@ mappages(pde_t *pgdir, void *va, uint size, uint pa, int perm)
     a += PGSIZE;
     pa += PGSIZE;
   }
+  cprintf("[end] mappages\n");
   return 0;
 }
 
@@ -118,6 +120,7 @@ static struct kmap {
 pde_t*
 setupkvm(void)
 {
+  cprintf("[start] setupkvm\n");
   pde_t *pgdir;
   struct kmap *k;
 
@@ -132,6 +135,7 @@ setupkvm(void)
       freevm(pgdir);
       return 0;
     }
+  cprintf("[end] setupkvm\n");
   return pgdir;
 }
 
@@ -182,6 +186,7 @@ switchuvm(struct proc *p)
 void
 inituvm(pde_t *pgdir, char *init, uint sz)
 {
+  cprintf("[start] inituvm\n");
   char *mem;
 
   if(sz >= PGSIZE)
@@ -190,6 +195,7 @@ inituvm(pde_t *pgdir, char *init, uint sz)
   memset(mem, 0, PGSIZE);
   mappages(pgdir, 0, PGSIZE, V2P(mem), PTE_W|PTE_U);
   memmove(mem, init, sz);
+  cprintf("[end] inituvm\n");
 }
 
 // Load a program segment into pgdir.  addr must be page-aligned
@@ -197,6 +203,7 @@ inituvm(pde_t *pgdir, char *init, uint sz)
 int
 loaduvm(pde_t *pgdir, char *addr, struct inode *ip, uint offset, uint sz)
 {
+  cprintf("[start] loaduvm\n");
   uint i, pa, n;
   pte_t *pte;
 
@@ -213,6 +220,7 @@ loaduvm(pde_t *pgdir, char *addr, struct inode *ip, uint offset, uint sz)
     if(readi(ip, P2V(pa), offset+i, n) != n)
       return -1;
   }
+  cprintf("[end] loaduvm\n");
   return 0;
 }
 
@@ -221,6 +229,7 @@ loaduvm(pde_t *pgdir, char *addr, struct inode *ip, uint offset, uint sz)
 int
 allocuvm(pde_t *pgdir, uint oldsz, uint newsz)
 {
+  cprintf("[start] allocuvm\n");
   char *mem;
   uint a;
 
@@ -244,7 +253,9 @@ allocuvm(pde_t *pgdir, uint oldsz, uint newsz)
       kfree(mem);
       return 0;
     }
+    incPageCounter();
   }
+  cprintf("[end] allocuvm\n");
   return newsz;
 }
 
@@ -255,6 +266,7 @@ allocuvm(pde_t *pgdir, uint oldsz, uint newsz)
 int
 deallocuvm(pde_t *pgdir, uint oldsz, uint newsz)
 {
+  cprintf("[start] deallocuvm\n");
   pte_t *pte;
   uint a, pa;
 
@@ -275,6 +287,7 @@ deallocuvm(pde_t *pgdir, uint oldsz, uint newsz)
       *pte = 0;
     }
   }
+  cprintf("[end] deallocuvm\n");
   return newsz;
 }
 
@@ -315,6 +328,7 @@ clearpteu(pde_t *pgdir, char *uva)
 pde_t*
 copyuvm(pde_t *pgdir, uint sz)
 {
+  cprintf("[start] copyuvm\n");
   pde_t *d;
   pte_t *pte;
   uint pa, i, flags;
@@ -335,6 +349,7 @@ copyuvm(pde_t *pgdir, uint sz)
     if(mappages(d, (void*)i, PGSIZE, V2P(mem), flags) < 0)
       goto bad;
   }
+  cprintf("[end] copyuvm\n");
   return d;
 
 bad:

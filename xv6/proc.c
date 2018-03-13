@@ -73,6 +73,7 @@ myproc(void) {
 static struct proc*
 allocproc(void)
 {
+  cprintf("[start] allocproc\n");
   struct proc *p;
   char *sp;
 
@@ -112,6 +113,7 @@ found:
   memset(p->context, 0, sizeof *p->context);
   p->context->eip = (uint)forkret;
 
+  cprintf("[end] allocproc\n");
   return p;
 }
 

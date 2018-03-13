@@ -1,10 +1,21 @@
 #include "types.h"
 #include "user.h"
 
-int main() {
-    int call = myMemory();
+int
+main(void)
+{
+  printf(1, "start pages: %d\n", myMemory());
 
-    printf(1, "%d\n", call);
+  int x;
+  for (x = 0; x < 10; x++)
+    sbrk(4096);
 
-    exit();
+  printf(1, "alloc'ing pages: %d\n", myMemory());
+
+  for (x = 0; x < 10; x++)
+    sbrk(-4096);
+
+  printf(1, "freeing pages: %d\n", myMemory());
+  
+  exit();
 }

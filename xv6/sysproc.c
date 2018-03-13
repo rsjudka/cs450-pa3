@@ -94,6 +94,5 @@ sys_uptime(void)
 int
 sys_myMemory(void)
 {
-  cprintf("in progress...\n");
-  return 1;
+  return myMemory();
 }
