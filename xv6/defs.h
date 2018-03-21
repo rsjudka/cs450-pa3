@@ -68,8 +68,6 @@ char*           kalloc(void);
 void            kfree(char*);
 void            kinit1(void*, void*);
 void            kinit2(void*, void*);
-void            incPageCounter(void); // change made
-int             myMemory(void); // change made
 
 // kbd.c
 void            kbdintr(void);
@@ -122,6 +120,7 @@ void            userinit(void);
 int             wait(void);
 void            wakeup(void*);
 void            yield(void);
+void            myMemory(void);
 
 // swtch.S
 void            swtch(struct context**, struct context*);

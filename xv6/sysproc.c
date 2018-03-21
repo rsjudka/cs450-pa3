@@ -94,5 +94,6 @@ sys_uptime(void)
 int
 sys_myMemory(void)
 {
-  return myMemory();
+  myMemory();
+  return 0;
 }
