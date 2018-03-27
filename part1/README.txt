@@ -27,7 +27,7 @@ DELIVERABLE 2:
 ================================================= SETUP =================================================
 
 REQUIRED PACKAGES:
-    GCC >=5.4.0 20160609 [https://gcc.gnu.org/install/download.html]
+    GCC >=5.4.0 [https://gcc.gnu.org/install/download.html]
     GDB [https://www.gnu.org/software/gdb/download/]
     Valgrind [http://valgrind.org/downloads/current.html]
 
