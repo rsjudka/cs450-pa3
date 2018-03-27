@@ -94,6 +94,7 @@ sys_uptime(void)
 int
 sys_myMemory(void)
 {
+  // param for showing extra kernel info?
   myMemory();
   return 0;
 }
