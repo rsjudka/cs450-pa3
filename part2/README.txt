@@ -1,7 +1,7 @@
 ================================================ PROJECT ================================================
 
 DIRECTORY STRUCTURE:
-    GroupID_PA3/
+    09_PA3/
         part1/
             ...
         part2/
@@ -10,16 +10,16 @@ DIRECTORY STRUCTURE:
             README.txt
 
 DELIVERABLE 1:
-    sources & executables - GroupID_PA3/part2/xv6/*
+    sources & executables - 09_PA3/part2/xv6/*
     README (this) - PA2/part2/README.txt
 
 DELIVERABLE 2:
-    myMemory() design w/ man page  - GroupID_PA3/part2/deliverables/myMemory_sys_call.pdf
+    myMemory() design w/ man page  - 09_PA3/part2/deliverables/myMemory_sys_call.pdf
 
 DELIVERABLE 3:
-    test program source - GroupID_PA3/part2/xv6/test.c
-    test program executable - GroupID_PA3/part2/xv6/_test (can only be run within xv6)
-    test data w/ reasons - GroupID_PA3/part2/deliverables/tests.pdf
+    test program source - 09_PA3/part2/xv6/test.c
+    test program executable - 09_PA3/part2/xv6/_test (can only be run within xv6)
+    test data w/ reasons - 09_PA3/part2/deliverables/tests.pdf
 
 ================================================= SETUP =================================================
 
@@ -28,16 +28,15 @@ REQUIRED PACKAGES:
     Virtualbox [https://www.virtualbox.org/wiki/Downloads] (or other supported virtualization software)
 
 BUILD ENVIORNMENT:
-    1) Extract GroupID_PA3 directory from GroupID_PA3.zip
-    2) In GroupID_PA3/part2/xv6/, run command
+    1) In 09_PA3/part2/xv6/, run command
            $ vagrant up
        to build virtual enviornemnt (NOTE this step may take a few minutes)
-    3) Once build finishes, run command
+    2) Once build finishes, run command
            $ vagrant ssh
-    4) You should now be in the virtual OS (Ubuntu 14.04)
-    5) To exit virtual OS, run command
+    3) You should now be in the virtual OS (Ubuntu 14.04)
+    4) To exit virtual OS, run command
            $ exit
-    6) To shutdown the virtual machine, run command
+    5) To shutdown the virtual machine, run command
            $ vagrant halt
 
 BUILD XV6:

@@ -1,7 +1,7 @@
 ================================================ PROJECT ================================================
 
 DIRECTORY STRUCTURE:
-    GroupID_PA3/
+    09_PA3/
         part1/
             ...
             README.txt
@@ -12,4 +12,4 @@ DIRECTORY STRUCTURE:
 ================================================= SETUP =================================================
 
 EXTRACT ASSIGNMENT:
-    1) Extract GroupID_PA3 directory from GroupID_PA3.zip
+    1) Extract 09_PA3 directory from 09_PA3.zip

@@ -1,7 +1,7 @@
 ================================================ PROJECT ================================================
 
 DIRECTORY STRUCTURE:
-    GroupID_PA3/
+    09_PA3/
         part1/
             malloc_no_free.c
             malloc_no_free
@@ -14,15 +14,15 @@ DIRECTORY STRUCTURE:
 
 DELIVERABLE 1:
     1.1
-        source - GroupID_PA3/part1/malloc_no_free.c
-        executable - GroupID_PA3/part1/malloc_no_free
+        source - 09_PA3/part1/malloc_no_free.c
+        executable - 09_PA3/part1/malloc_no_free
     1.2
-        source - GroupID_PA3/part1/malloc_free_print.c
-        executable - GroupID_PA3/part1/malloc_free_print
-    README (this) - GroupID_PA3/part1/README.txt
+        source - 09_PA3/part1/malloc_free_print.c
+        executable - 09_PA3/part1/malloc_free_print
+    README (this) - 09_PA3/part1/README.txt
 
 DELIVERABLE 2:
-    test results & answers - GroupID_PA3/part1/deliverables/tests_answers.pdf
+    test results & answers - 09_PA3/part1/deliverables/tests_answers.pdf
 
 ================================================= SETUP =================================================
 
@@ -32,7 +32,7 @@ REQUIRED PACKAGES:
     Valgrind [http://valgrind.org/downloads/current.html]
 
 BUILD & EXECUTE DELIVERABLE 1.1:
-    1) In GroupID_PA3/part1/, run commands
+    1) In 09_PA3/part1/, run commands
            $ gcc malloc_no_free.c -o malloc_no_free
            $ ./malloc_no_free
        to build and execute deliverable 1.1
@@ -44,7 +44,7 @@ DEBUG DELIVERABLE 1.1 USING VALGRIND:
     1)
 
 BUILD & EXECUTE DELIVERABLE 1.2:
-    1) In GroupID_PA3/part1/, run commands
+    1) In 09_PA3/part1/, run commands
            $ gcc malloc_free_print.c -o malloc_free_print
            $ ./malloc_free_print
        to build and execute deliverable 1.2
