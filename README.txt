@@ -11,5 +11,5 @@ DIRECTORY STRUCTURE:
 
 ================================================= SETUP =================================================
 
-EXTRACT ASSIGNMENT:
+INITIALIZE ASSIGNMENT:
     1) Extract 09_PA3 directory from 09_PA3.zip

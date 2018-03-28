@@ -18,7 +18,9 @@ DELIVERABLE 2:
 
 DELIVERABLE 3:
     test program source - 09_PA3/part2/xv6/test.c
+                          09_PA3/part2/xv6/test_s.c
     test program executable - 09_PA3/part2/xv6/_test (can only be run within xv6)
+                              09_PA3/part2/xv6/_test_s (can only be run within xv6)
     test data w/ reasons - 09_PA3/part2/deliverables/tests.pdf
 
 ================================================= SETUP =================================================

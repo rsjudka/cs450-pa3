@@ -20,4 +20,4 @@
 #define SYS_link     19
 #define SYS_mkdir    20
 #define SYS_close    21
-#define SYS_myMemory 22 // change made
+#define SYS_myMemory 22

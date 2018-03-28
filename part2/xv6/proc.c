@@ -534,7 +534,7 @@ procdump(void)
 }
 
 void
-myMemory()
+myMemory(void)
 {
-
+  
 }

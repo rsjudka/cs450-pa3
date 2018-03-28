@@ -90,11 +90,9 @@ sys_uptime(void)
   return xticks;
 }
 
-// change made
 int
 sys_myMemory(void)
 {
-  // param for showing extra kernel info?
   myMemory();
   return 0;
 }
