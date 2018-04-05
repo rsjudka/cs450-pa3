@@ -1,3 +1,7 @@
+James Guerrera-Sapone - A20365203 
+Robert Judka - A20348051
+
+
 ================================================ PROJECT ================================================
 
 DIRECTORY STRUCTURE:
@@ -17,10 +21,10 @@ DELIVERABLE 2:
     myMemory() design w/ man page  - 09_PA3/part2/deliverables/myMemory_sys_call.pdf
 
 DELIVERABLE 3:
-    test program source - 09_PA3/part2/xv6/test.c
-                          09_PA3/part2/xv6/test_s.c
-    test program executable - 09_PA3/part2/xv6/_test (can only be run within xv6)
-                              09_PA3/part2/xv6/_test_s (can only be run within xv6)
+    test program sources - 09_PA3/part2/xv6/test.c
+                           09_PA3/part2/xv6/test_s.c
+    test program executables - 09_PA3/part2/xv6/_test (can only be run within xv6)
+                               09_PA3/part2/xv6/_test_s (can only be run within xv6)
     test data w/ reasons - 09_PA3/part2/deliverables/tests.pdf
 
 ================================================= SETUP =================================================
@@ -52,6 +56,6 @@ BUILD XV6:
 
 RUN TEST PROGRAM:
     1) In xv6, run command
-           $ test [1-6]
+           $ test [1-12]
        to run the test program for this programming assignment
 

@@ -189,7 +189,6 @@ t10(void)
 
 void
 t11(void){
-  printf(1, "SMALL TEST PROCESS\n");
   char *x[1] = {"test_s"};
   exec(x[0], x);
 }
@@ -197,7 +196,7 @@ t11(void){
 void
 t12_1(void)
 {
-  int large_stack[996];
+  int large_stack[992];
   memset(large_stack, 0, sizeof(int));
   myMemory();
 }
@@ -205,7 +204,10 @@ t12_1(void)
 void
 t12_2(void)
 {
-  int large_stack[997];
+  int large_stack[993];
   memset(large_stack, 0, sizeof(int));
   myMemory();
 }
+
+// James Guerrera-Sapone - A20365203 
+// Robert Judka - A20348051

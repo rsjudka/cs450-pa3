@@ -536,5 +536,40 @@ procdump(void)
 void
 myMemory(void)
 {
-  
+  struct proc *p = myproc();
+	pde_t *pgdir;
+
+  int kernel_p = 0;
+  int kernel_w = 0;
+	int user_p = 0;
+  int user_w = 0;
+	
+  int i, j;
+	for(i = 0; i < NPDENTRIES; i++){
+		if(p->pgdir[i] & PTE_P){
+			pgdir = (pte_t*)P2V(PTE_ADDR(p->pgdir[i]));
+			for(j = 0; j < NPTENTRIES; j++){
+				if(pgdir[j] & PTE_P){ // kernel
+          kernel_p++;
+          if(pgdir[j] & PTE_U){ // user
+            user_p++;
+            if(pgdir[j] & PTE_W) // user writeable
+              user_w++;
+          }
+          if(pgdir[j] & PTE_W) // kernel writeable
+            kernel_w++;
+        }
+      } 
+		}
+	}
+
+  cprintf("----------- MyMemory -----------\n");
+  cprintf("| ========== kernel ==========\n");
+  cprintf("|  allocated pages: %d\n", kernel_p);
+  cprintf("|  writable pages: %d\n", kernel_w);
+  cprintf("|\n");
+  cprintf("| =========== user ===========\n");
+  cprintf("|  allocated pages: %d\n", user_p);
+  cprintf("|  writable pages: %d\n", user_w);
+  cprintf("--------------------------------\n");
 }
